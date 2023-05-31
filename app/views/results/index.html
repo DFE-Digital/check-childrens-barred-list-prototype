@@ -1,0 +1,49 @@
+{% extends "layouts/main.html" %}
+
+{% if isPossibleMatch %}
+  {% set title = 'Possible match found' %}
+{% else %}
+  {% set title = 'No match found' %}
+{% endif %}
+
+
+
+{% block beforeContent %}
+  {{ govukBreadcrumbs({
+    items: [
+      {
+        text: "Home",
+        href: "/"
+      },
+      {
+        text: "Search results"
+      }
+    ]
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds-from-desktop">
+      <h1 class="govuk-heading-l">{{title}}</h1>
+
+      <p>You searched for:</p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>
+          {{data.lastName}}
+        </li>
+        <li>
+          {{data.day}} {{data.month}} {{data.year}}
+        </li>
+      </ul>
+
+
+      {% if isPossibleMatch %}
+        <p>Contact DBS at <a href="mailto:dbscost@dbs.gov.uk">dbscost@dbs.gov.uk</a> for more details.</p>
+      {% else %}
+        <p>No match found</p>
+      {% endif %}
+    </div>
+  </div>
+{% endblock %}

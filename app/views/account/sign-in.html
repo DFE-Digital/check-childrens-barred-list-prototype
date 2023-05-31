@@ -1,0 +1,44 @@
+{% extends "layouts/main.html" %}
+
+{% set title = 'Sign in' %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds-from-desktop">
+      <h1 class="govuk-heading-l">Sign in to check the Children’s Barred List</h1>
+
+      {# <p>Use this service to check if an individual appears on the Children’s Barred List.</p> #}
+
+      <p>You can use this service if you’re either:
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>
+         hiring a new employee and you’re waiting for the result of an Enhanced DBS
+        </li>
+        <li>
+          hiring an existing employee who has worked in a school or college where they had regular contact with children
+        </li>
+      </ul>
+
+{#
+Schools, colleges, local authorities and universities can use this search to check the children's barred list status of individuals who they are
+considering engaging in regulated activity. This search should only be used to check the barred list status of a new starter pending the receipt
+of an Enhanced DBS or where an individual has worked in post in a school or college that brought them into regular contact with children or
+young persons which ended not more than three months prior to that person's appointment to the organisation. If a potential match is
+returned please contact DBS via email dbscost@dbs.gov.uk. Please note this check is only permitted for those entitled to ask an exempted
+question under the Rehabilitation of Offenders Act. #}
+
+
+{# • I confirm I am entitled to ask an exempted question under the Rehabilitation of Offenders Act #}
+
+
+      <form method="post">
+        {{ govukButton({
+          text: "Sign in",
+          isStartButton: true
+        }) }}
+      </form>
+
+    </div>
+  </div>
+{% endblock %}
