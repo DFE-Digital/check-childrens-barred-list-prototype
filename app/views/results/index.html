@@ -3,7 +3,7 @@
 {% if isPossibleMatch %}
   {% set title = 'Possible match found' %}
 {% else %}
-  {% set title = 'No match found' %}
+  {% set title = 'No record found' %}
 {% endif %}
 
 
@@ -27,22 +27,31 @@
     <div class="govuk-grid-column-two-thirds-from-desktop">
       <h1 class="govuk-heading-l">{{title}}</h1>
 
-      <p>You searched for:</p>
-
-      <ul class="govuk-list govuk-list--bullet">
-        <li>
-          {{data.lastName}}
-        </li>
-        <li>
-          {{data.dob | isoDateFromDateInput | date}}
-        </li>
-      </ul>
-
+      {{ govukSummaryList({
+        rows: [
+          {
+            key: {
+              text: "Last name"
+            },
+            value: {
+              text: data.lastName
+            }
+          },
+          {
+            key: {
+              text: "Date of birth"
+            },
+            value: {
+              text: data.dob | isoDateFromDateInput | date
+            }
+          }
+        ]
+      }) }}
 
       {% if isPossibleMatch %}
         <p>Contact DBS at <a href="mailto:dbscost@dbs.gov.uk">dbscost@dbs.gov.uk</a> for more details.</p>
       {% else %}
-        <p>No match found</p>
+        <p><a href="/">Try another search</a></p>
       {% endif %}
     </div>
   </div>
