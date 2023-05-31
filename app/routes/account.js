@@ -1,6 +1,14 @@
 const users = require('../data/users.json')
 module.exports = router => {
 
+  router.get('/account/sign-in', (req, res) => {
+    if(req.session.data.user) {
+      res.redirect('/')
+    } else {
+      res.render('account/sign-in')
+    }
+  })
+
   router.post('/account/sign-in', (req, res) => {
     res.locals.user = req.session.data.user = users[0]
 
@@ -12,7 +20,7 @@ module.exports = router => {
   })
 
   router.get('/account/sign-out', (req, res) => {
-    res.locals.user = req.session.data.user = null
+    req.session.data = {}
     res.redirect('/')
   })
 
