@@ -19,7 +19,8 @@
           }) }}
 
           {{ govukDateInput({
-            id: "date",
+            id: "[dob]",
+          name: "[dob]",
             fieldset: {
               legend: {
                 text: "Date of birth",
@@ -28,22 +29,22 @@
             },
             items: [
               {
-                name: "day",
+                name: "[dob][day]",
                 label: "Day",
                 classes: "govuk-input--width-2",
-                value: data.day
+                value: data.dob.day
               },
               {
-                name: "month",
+                name: "[dob][month]",
                 label: "Month",
                 classes: "govuk-input--width-2",
-                value: data.month
+                value: data.dob.month
               },
               {
-                name: "year",
+                name: "[dob][year]",
                 label: "Year",
                 classes: "govuk-input--width-4",
-                value: data.year
+                value: data.dob.year
               }
             ]
           }) }}

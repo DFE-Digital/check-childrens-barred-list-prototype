@@ -34,7 +34,7 @@
           {{data.lastName}}
         </li>
         <li>
-          {{data.day}} {{data.month}} {{data.year}}
+          {{data.dob | isoDateFromDateInput | date}}
         </li>
       </ul>
 

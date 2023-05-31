@@ -13,9 +13,9 @@ module.exports = router => {
     }
 
     searchLastName = searchLastName.toLowerCase()
-    let searchDay = parseInt(_.get(req.session.data, 'day'), 10)
-    let searchMonth = parseInt(_.get(req.session.data, 'month'), 10)
-    let searchYear = parseInt(_.get(req.session.data, 'year'), 10)
+    let searchDay = parseInt(_.get(req.session.data.dob, 'day'), 10)
+    let searchMonth = parseInt(_.get(req.session.data.dob, 'month'), 10)
+    let searchYear = parseInt(_.get(req.session.data.dob, 'year'), 10)
     let searchDate = DateTime.fromObject({
       day: searchDay,
       month: searchMonth,
