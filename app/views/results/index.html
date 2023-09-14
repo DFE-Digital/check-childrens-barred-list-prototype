@@ -1,9 +1,9 @@
 {% extends "layouts/main.html" %}
 
 {% if isPossibleMatch %}
-  {% set title = 'Record found on the Children’s Barred List' %}
+  {% set title = 'Record found' %}
 {% else %}
-  {% set title = 'No record found on the Children’s Barred List' %}
+  {% set title = 'No record found' %}
 {% endif %}
 
 {% block beforeContent %}
@@ -47,7 +47,8 @@
       }) }}
 
       {% if isPossibleMatch %}
-        <p>Contact DBS at <a href="mailto:dbscost@dbs.gov.uk">dbscost@dbs.gov.uk</a> for more details.</p>
+        {# <p>Contact DBS at <a href="mailto:dbscost@dbs.gov.uk">dbscost@dbs.gov.uk</a> for more details.</p> #}
+        <p>The person you searched for may not be allowed to work with children. Email the Disclosure and Barring Service (DBS) at <a href="mailto:dbscost@dbs.gov.uk">dbscost@dbs.gov.uk</a> to check.</p>
       {% else %}
         <p><a href="/">Try another search</a></p>
       {% endif %}
