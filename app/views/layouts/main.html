@@ -5,10 +5,6 @@ https://prototype-kit.service.gov.uk/docs/how-to-use-layouts
 
 {% extends "govuk-prototype-kit/layouts/govuk-branded.njk" %}
 
-{% block pageTitle %}
-  {{title}} – {{serviceName}} – GOV.UK
-{% endblock %}
-
 {% block header %}
   {% include "_includes/header.njk" %}
   {{ govukPhaseBanner({
