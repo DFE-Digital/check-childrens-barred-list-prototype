@@ -7,30 +7,15 @@
     <div class="govuk-grid-column-two-thirds-from-desktop">
       <h1 class="govuk-heading-l">{{pageName}}</h1>
 
-      <p>Use this service to check if someone is allowed to work with children. You can use it if you’re:</p>
-
+      <p>People on the children’s barred list are not allowed to work with children.</p>
+      <p>The list is usually checked as part of an enhanced Disclosure and Barring Service (DBS) check.</p>
+      <p>Schools, colleges, local authorities and higher education institutions can also check the children’s barred list separately.</p>
+      <p>You can search the list using a new employee’s last name and date of birth. You should only do this if they either:</p>
       <ul class="govuk-list govuk-list--bullet">
-        <li>
-          waiting for the result of a Disclosure and Barring Service (DBS) check for a new employee
-        </li>
-        <li>
-          checking the status of an employee who worked in a school or college less than 3 months ago
-        </li>
+        <li>will start working with children while waiting for the result of an enhanced DBS check</li>
+        <li>do not need an enhanced DBS check because they’ve worked with children in a school or college within the last 3 months</li>
       </ul>
-
-
-
-{#
-Schools, colleges, local authorities and universities can use this search to check the children's barred list status of individuals who they are
-considering engaging in regulated activity. This search should only be used to check the barred list status of a new starter pending the receipt
-of an Enhanced DBS or where an individual has worked in post in a school or college that brought them into regular contact with children or
-young persons which ended not more than three months prior to that person's appointment to the organisation. If a potential match is
-returned please contact DBS via email dbscost@dbs.gov.uk. Please note this check is only permitted for those entitled to ask an exempted
-question under the Rehabilitation of Offenders Act. #}
-
-
-{# • I confirm I am entitled to ask an exempted question under the Rehabilitation of Offenders Act #}
-
+      <p>Independent training providers, 16 to 19 academies and special post-16 institutions cannot use this service.</p>
 
       <form method="post">
         {{ govukButton({
