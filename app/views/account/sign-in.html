@@ -1,11 +1,11 @@
 {% extends "layouts/main.html" %}
 
-{% set pageName = 'Sign in to check the children’s barred list' %}
+{% set pageName = 'Check the childrens barred list' %}
 
 {% block content %}
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds-from-desktop">
-      <h1 class="govuk-heading-l">{{pageName}}</h1>
+      <h1 class="govuk-heading-xl">Check the children's barred list</h1>
 
       <p>People on the children’s barred list are not allowed to work with children.</p>
       <p>The list is usually checked as part of a new employee’s enhanced Disclosure and Barring Service (DBS) check.</p>
@@ -16,12 +16,17 @@
         <li>does not need an enhanced DBS check because they’ve worked with children in a school or college within the last 3 months</li>
       </ul>
 
-      <p>Independent training providers, 16 to 19 academies and special post-16 institutions cannot check the children’s barred list separately.</p>
       <p>You’ll need the new employee’s last name and date of birth to check the children’s barred list.</p>
+      <h2 class="govuk-heading-m">Before you start</h2>
+<p>You need a DfE Sign-in account. If you do not have one then you can:</p>
+<ul class="govuk-list govuk-list--bullet">
+<li>ask your organisation’s approver to create an account for you</li>
+<li>use the <a href="https://help.signin.education.gov.uk/contact-us">contact form</a> to request an account if you do not have an approver</li>
+</ul>
 
       <form method="post">
         {{ govukButton({
-          text: "Sign in",
+          text: "Start now",
           isStartButton: true
         }) }}
       </form>
